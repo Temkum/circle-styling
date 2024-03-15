@@ -1,30 +1,6 @@
-.main{
-    background: #ff5;
-    border: 1px solid black;
-    padding: 1rem;
-
-    .main-circle{
-        background: #46e009;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border: 1px solid rgb(219, 17, 17);
-
-        .first-circle{
-            background: red;
-
-            .secondary-circle{
-                background: blue;
-                border: 1px solid black;
-                gap: 1rem;
-                padding: 1rem;
-            }
-        }
-    }
-}
-
-$big-circle-size: 300px;
-$small-circle-size: 50px;
-$big-circle-right-size: 200px;
+$big-circle-size: 450px;
+$small-circle-size: 90px;
+$big-circle-right-size: 230px;
 
 .container {
     display: flex;
@@ -39,8 +15,8 @@ $big-circle-right-size: 200px;
     height: $big-circle-size;
     border-radius: 50%;
     background-color: #f0f0f0;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     padding: 20px;
 }
@@ -49,14 +25,35 @@ $big-circle-right-size: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; 
 }
 
-.small-circle {
+.small-circle, .small-circle2, .small-circle3 {
     width: $small-circle-size;
     height: $small-circle-size;
     border-radius: 50%;
     background-color: #3498db;
     margin: 0 5px;
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    color: #fff;
+}
+
+.small-circle2, .small-circle3 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+
+.small-circle2 {
+    top: 70%;
+    left: 20%;
+}
+
+.small-circle3 {
+    top: 10%;
+    left: 20%;
 }
 
 .big-circle-right {
@@ -64,10 +61,16 @@ $big-circle-right-size: 200px;
     height: $big-circle-right-size;
     border-radius: 50%;
     background-color: #2ecc71;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-   
-   
-   
-   
-   
+    .text-box {
+        padding: 3px;
+        border: 1px solid #fff;
+        color: #fff;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+}
